@@ -1,0 +1,13 @@
+---
+- hosts: all
+  vars:
+    npm_globals:
+      - eslint
+      - babel-eslint
+      - eslint-plugin-react
+  tasks:
+    - name: install npm global {{ item }}
+      npm:
+        name: "{{ item }}"
+        global: true
+      with_items: npm_globals

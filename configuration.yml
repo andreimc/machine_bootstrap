@@ -15,7 +15,7 @@
     clone_url: https://github.com/tmux-plugins/tpm
     dest: /Users/{{ ansible_user_id }}/.tmux/plugins/tpm
   - role: osxc.repository
-    clone_url: https://github.com/square/maximum-awesome.git
+    clone_url: https://github.com/andreimc/maximum-awesome.git
     dest: /Users/{{ ansible_user_id }}/.vim
     links:
     - src: vimrc
@@ -33,6 +33,7 @@
   - copy: src=dotfiles/vimrc.local dest=/Users/{{ ansible_user_id }}/.vimrc.local
   - copy: src=dotfiles/vimrc.bundles.local dest=/Users/{{ ansible_user_id }}/.vimrc.bundles.local
   - copy: src=dotfiles/tmux.conf.local dest=/Users/{{ ansible_user_id }}/.tmux.conf.local
+  - copy: src=dotfiles/eslintrc dest=/Users/{{ ansible_user_id }}/.eslintrc
   - shell: dscl localhost -change /Local/Default/Users/{{ ansible_user_id }} UserShell /bin/bash /usr/local/bin/zsh
     ignore_errors: true
     sudo: yes

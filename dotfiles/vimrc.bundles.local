@@ -24,3 +24,5 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
+Plugin 'othree/es.next.syntax.vim'
+Plugin 'othree/yajs.vim`, { 'for': 'javascript' }
