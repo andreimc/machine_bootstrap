@@ -19,6 +19,6 @@ After you install vim plugins you need to:
 
 ```
 cd ~/.vim/bundle/YouCompleteMe
-./install.py --all
+./install.py --clang-completer --tern-completer --gocode-completer
 ```
 
