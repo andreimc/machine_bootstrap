@@ -1,0 +1,9 @@
+name: <%= @args[0] %>
+root: ~/projects/<%= @args[0] %>
+windows:
+  - code:
+      layout: even-vertical
+      panes:
+        - vim
+        -
+

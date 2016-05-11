@@ -34,6 +34,9 @@ set-option -g history-limit 10000
 set-option -g pane-active-border-bg colour240
 set-option -g visual-activity on
 
+# tmuxkinator pane
+set -g pane-base-index 1
+
 # status
 set-option -g allow-rename off
 set-option -g status-interval 1

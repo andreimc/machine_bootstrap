@@ -1,0 +1,9 @@
+name: <%= @args[0] %>
+root: ~/personal/<%= @args[0] %>
+windows:
+  - code:
+      layout: even-vertical
+      panes:
+        - vim
+        -
+

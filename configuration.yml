@@ -34,6 +34,9 @@
   - copy: src=dotfiles/vimrc.bundles.local dest=/Users/{{ ansible_user_id }}/.vimrc.bundles.local
   - copy: src=dotfiles/tmux.conf.local dest=/Users/{{ ansible_user_id }}/.tmux.conf.local
   - copy: src=dotfiles/eslintrc dest=/Users/{{ ansible_user_id }}/.eslintrc
+  - file: dest=/Users/{{ ansible_user_id }}/.tmuxinator state=directory
+  - copy: src=dotfiles/tmuxinator/projects.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/projects.yml
+  - copy: src=dotfiles/tmuxinator/personal.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/personal.yml
   - shell: dscl localhost -change /Local/Default/Users/{{ ansible_user_id }} UserShell /bin/bash /usr/local/bin/zsh
     ignore_errors: true
     sudo: yes
