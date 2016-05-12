@@ -1,11 +1,16 @@
 ---
 - hosts: all
+  vars:
+    gems:
+      - tmuxinator
   roles:
     - role: ruby_install
       ruby:
         version: 2.3.1
         global: true
+        gems: gems
     - role: ruby_install
       ruby:
         version: 2.1.5
         global: false
+        gems: gems

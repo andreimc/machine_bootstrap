@@ -1,8 +1,0 @@
-- hosts: all
-  vars:
-    gem_list:
-      - tmuxinator
-  tasks:
-    - name: install gem {{ item }}
-      command: /bin/bash -c -l 'eval "$(rbenv init -)" && gem install {{ item }}'
-      with_items: gem_list

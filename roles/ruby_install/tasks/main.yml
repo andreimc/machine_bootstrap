@@ -9,3 +9,12 @@
 - name: set ruby global
   command: rbenv global {{ ruby.version }}
   when: ruby.global == true
+- name: check installed gems
+  command: /bin/bash -c 'eval "$(rbenv shell {{ ruby.version }})"; gem list'
+  register: installed_gems
+  ignore_errors: true
+- name: install gem {{ item }}
+  command: /bin/bash -c 'eval "$(rbenv shell {{ ruby.version }})"; gem install {{ item }}'
+  with_items: ruby.gems
+  when: item not in installed_gems.stdout
+
