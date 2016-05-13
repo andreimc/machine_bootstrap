@@ -10,6 +10,7 @@
     - caskroom/versions
     brew_packages:
     - awscli
+    - awsebcli
     - ctags
     - cmake
     - elasticsearch
@@ -48,6 +49,7 @@
     - flux
     - font-inconsolata-g-for-powerline
     - google-chrome
+    - grandperspective
     - istat-menus
     - iterm2-beta
     - karabiner
@@ -59,3 +61,4 @@
     - vagrant
     - virtualbox
     - vlc
+    - whatsapp

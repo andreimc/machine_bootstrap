@@ -1,3 +1,5 @@
+autocmd vimenter * :NERDTree .
+map <leader>nn :NERDTreeFind<CR>
 set nocursorline " don't highlight current line
 
 " diable error bells

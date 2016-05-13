@@ -1,0 +1,10 @@
+---
+- hosts: all
+  vars:
+    pip_packages:
+      -
+  tasks:
+    - name: "install pip package {{ item }}"
+      pip:
+        name: "{{ item }}"
+      with_items: pip_packages
