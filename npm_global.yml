@@ -5,6 +5,7 @@
       - eslint
       - babel-eslint
       - eslint-plugin-react
+      - react-native-cli
   tasks:
     - name: install npm global {{ item }}
       npm:

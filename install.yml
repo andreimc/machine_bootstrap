@@ -9,13 +9,14 @@
     - homebrew/versions
     - caskroom/versions
     brew_packages:
+    - apple-gcc42
     - awscli
     - awsebcli
     - ctags
     - cmake
     - elasticsearch
     - elixir
-    - apple-gcc42
+    - flow
     - git
     - golang
     - hub
@@ -36,6 +37,7 @@
     - tmate
     - tig
     - tmux
+    - watchman
     - zsh
     brew_pkg_with_opts:
     - { pkg: "macvim" , opts: "with-override-system-vim" }
