@@ -87,3 +87,22 @@ eval "$(hub alias -s)"
 eval "$(docker-machine env default)"
 export EDITOR=vim
 source ~/.scm_breeze/scm_breeze.sh
+
+_tmuxinator() {
+  local commands projects
+  projects=(${(f)"$(ls ~/projects)"})
+  personal=(${(f)"$(ls ~/personal)"})
+
+  case $words[2] in
+    projects)
+      _describe -t projects "tmuxinator projects" projects && return 0
+      ;;
+    personal)
+      _describe -t personal "tmuxinator personal" personal && return 0
+    ;;
+  esac
+
+  return
+}
+
+compdef _tmuxinator tmuxinator mux
