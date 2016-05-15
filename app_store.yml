@@ -3,6 +3,7 @@
   roles:
   - role: app_store
     apps:
+      - Airmail
       - Caffeine
       - CCMenu
       - Dash
