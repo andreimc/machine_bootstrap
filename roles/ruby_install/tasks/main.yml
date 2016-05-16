@@ -10,11 +10,11 @@
   command: rbenv global {{ ruby.version }}
   when: ruby.global == true
 - name: check installed gems
-  command: /bin/bash -c 'eval "$(rbenv shell {{ ruby.version }})"; gem list'
+  command: /bin/bash -c '/Users/{{ ansible_user_id }}/.rbenv/versions/{{ ruby.version }}/bin/gem list'
   register: installed_gems
   ignore_errors: true
-- name: install gem {{ item }}
-  command: /bin/bash -c 'eval "$(rbenv shell {{ ruby.version }})"; gem install {{ item }}'
+- name: install gems
+  command: /bin/bash -c '/Users/{{ ansible_user_id }}/.rbenv/versions/{{ ruby.version }}/bin/gem install {{ item }}'
   with_items: ruby.gems
   when: item not in installed_gems.stdout
 
