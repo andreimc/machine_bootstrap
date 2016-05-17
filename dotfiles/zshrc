@@ -85,6 +85,9 @@ alias tsh="tmuxinator personal"
 
 eval "$(hub alias -s)"
 eval "$(docker-machine env default)"
+
+alias dockrm="docker rm $(docker ps -a -q)"
+alias dockrmi="docker rmi $(docker images -q)"
 export EDITOR=vim
 source ~/.scm_breeze/scm_breeze.sh
 
