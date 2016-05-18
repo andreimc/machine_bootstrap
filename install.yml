@@ -23,6 +23,7 @@
     - imagemagick
     - kubectl
     - leiningen
+    - maven
     - memcached
     - mongo
     - node
