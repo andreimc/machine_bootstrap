@@ -84,7 +84,6 @@ alias tsj="tmuxinator projects"
 alias tsh="tmuxinator personal"
 
 eval "$(hub alias -s)"
-eval "$(docker-machine env default)"
 
 alias dockrm='eval "$(docker rm $(docker ps -a -q))"'
 alias dockrmi='eval "$(docker rmi $(docker images -q))"'
