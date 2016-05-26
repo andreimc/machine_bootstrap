@@ -18,6 +18,7 @@
     - elixir
     - flow
     - git
+    - git-lfs
     - golang
     - hub
     - imagemagick
