@@ -12,6 +12,7 @@
     - apple-gcc42
     - awscli
     - awsebcli
+    - azure-cli
     - ctags
     - cmake
     - elasticsearch

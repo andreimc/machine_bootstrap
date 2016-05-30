@@ -25,3 +25,6 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'jgdavey/tslime.vim'
 Plugin 'othree/es.next.syntax.vim'
 Plugin 'othree/yajs.vim', { 'for': 'javascript' }
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'kien/rainbow_parentheses.vim'

@@ -1,5 +1,10 @@
-autocmd vimenter * :NERDTree .
 set nocursorline " don't highlight current line
+autocmd VimEnter * if !argc() | NERDTree | endif
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " diable error bells
 set noerrorbells visualbell t_vb=
@@ -31,6 +36,7 @@ let mapleader = ","
 "" vim-airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'kolor'
+
 if has("gui_macvim") && has("gui_running") || getcwd() =~ "new_projects"
  autocmd VimEnter * NERDTree
  autocmd VimEnter * wincmd p
