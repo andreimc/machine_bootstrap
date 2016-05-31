@@ -1,6 +1,11 @@
 set nocursorline " don't highlight current line
 autocmd VimEnter * if !argc() | NERDTree | endif
 
+" Evaluate Clojure buffers on load
+autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
+autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
+autocmd BufRead *.cljs try | silent! Require | catch /^Fireplace/ | endtry
+
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
