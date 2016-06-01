@@ -36,6 +36,7 @@
     - rbenv
     - reattach-to-user-namespace
     - redis
+    - rlwrap
     - terraform
     - the_silver_searcher
     - tmate

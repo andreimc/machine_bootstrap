@@ -38,9 +38,9 @@
   - copy: src=dotfiles/tmuxinator/projects.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/projects.yml
   - copy: src=dotfiles/tmuxinator/personal.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/personal.yml
   - shell: dscl localhost -change /Local/Default/Users/{{ ansible_user_id }} UserShell /bin/bash /usr/local/bin/zsh
+    ignore_errors: true
   - file: dest=/Users/{{ ansible_user_id }}/.lein state=directory
   - copy: src=dotfiles/profiles.clj dest=/Users/{{ ansible_user_id }}/.lein/profiles.clj
-    ignore_errors: true
     sudo: yes
 
 - hosts: all
