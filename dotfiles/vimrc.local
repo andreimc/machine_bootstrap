@@ -6,6 +6,9 @@ autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 autocmd BufRead *.cljs try | silent! Require | catch /^Fireplace/ | endtry
 
+nnoremap <Space> <Nop>
+let maplocalleader=" "
+
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
