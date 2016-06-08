@@ -21,6 +21,7 @@
     - git
     - git-lfs
     - golang
+    - heroku-toolbelt
     - hub
     - imagemagick
     - kubectl
