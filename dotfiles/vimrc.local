@@ -6,6 +6,8 @@ autocmd BufRead,BufNewFile *.cljs setlocal filetype=clojure
 autocmd BufRead *.clj try | silent! Require | catch /^Fireplace/ | endtry
 autocmd BufRead *.cljs try | silent! Require | catch /^Fireplace/ | endtry
 
+let g:redl_use_vsplit = 1
+
 nnoremap <Space> <Nop>
 let maplocalleader=" "
 
@@ -88,13 +90,10 @@ let g:syntastic_javascript_checkers = ['eslint']
 vnoremap > >gv
 :vnoremap < <gv
 
-" rspec.vim
-map <Leader>f :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+let g:no_turbux_mappings = 1
+map <leader>f <Plug>SendTestToTmux
+map <leader>s <Plug>SendFocusedTestToTmux
+map <leader>l <Plug>SendFocusedTestToTmux
 
 
 set clipboard+=unnamed
