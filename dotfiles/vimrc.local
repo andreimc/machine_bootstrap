@@ -95,6 +95,7 @@ map <leader>f <Plug>SendTestToTmux
 map <leader>s <Plug>SendFocusedTestToTmux
 map <leader>l <Plug>SendFocusedTestToTmux
 
+let g:turbux_runner  = 'vimux'
 
 set clipboard+=unnamed
 
