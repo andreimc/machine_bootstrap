@@ -3,6 +3,7 @@
   vars:
     gems:
       - tmuxinator
+      - rubocop
   roles:
     - role: ruby_install
       ruby:

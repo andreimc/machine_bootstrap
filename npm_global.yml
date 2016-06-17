@@ -6,6 +6,9 @@
       - babel-eslint
       - eslint-plugin-react
       - react-native-cli
+      - tern
+      - js-beautify
+      - jshint
   tasks:
     - name: install npm global {{ item }}
       npm:

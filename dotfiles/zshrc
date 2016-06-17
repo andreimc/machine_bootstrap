@@ -92,6 +92,8 @@ alias dockrmi='eval "$(docker rmi $(docker images -q))"'
 export EDITOR=vim
 source ~/.scm_breeze/scm_breeze.sh
 
+export ITERM_24BIT=1
+
 _tmuxinator() {
   local commands projects
   projects=(${(f)"$(ls ~/projects)"})

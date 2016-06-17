@@ -3,6 +3,9 @@
 - hosts: all
   roles:
   - role: osxc.repository
+    clone_url: https://github.com/syl20bnr/spacemacs
+    dest: /Users/{{ ansible_user_id }}/.emacs.d
+  - role: osxc.repository
     clone_url: https://github.com/robbyrussell/oh-my-zsh.git
     dest: /Users/{{ ansible_user_id }}/.oh-my-zsh
   - role: osxc.repository
@@ -29,11 +32,13 @@
     dest: /Users/{{ ansible_user_id }}/.vim/bundle/Vundle.vim
   post_tasks:
   - copy: src=dotfiles/zshrc dest=/Users/{{ ansible_user_id }}/.zshrc
+  - copy: src=dotfiles/spacemacs dest=/Users/{{ ansible_user_id }}/.spacemacs
   - copy: src=dotfiles/gemrc dest=/Users/{{ ansible_user_id }}/.gemrc
   - copy: src=dotfiles/vimrc.local dest=/Users/{{ ansible_user_id }}/.vimrc.local
   - copy: src=dotfiles/vimrc.bundles.local dest=/Users/{{ ansible_user_id }}/.vimrc.bundles.local
   - copy: src=dotfiles/tmux.conf.local dest=/Users/{{ ansible_user_id }}/.tmux.conf.local
   - copy: src=dotfiles/eslintrc dest=/Users/{{ ansible_user_id }}/.eslintrc
+  - copy: src=dotfiles/tern-config dest=/Users/{{ ansible_user_id }}/.tern-config.js
   - file: dest=/Users/{{ ansible_user_id }}/.tmuxinator state=directory
   - copy: src=dotfiles/tmuxinator/projects.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/projects.yml
   - copy: src=dotfiles/tmuxinator/personal.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/personal.yml

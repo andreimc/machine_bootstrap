@@ -1,10 +1,10 @@
 # plugins
 
 
-# remap prefix to Control + a
-set -g prefix C-a
+# remap prefix to ALT + a
+set -g prefix M-a
 unbind C-b
-bind C-a send-prefix
+bind M-a send-prefix
 
 #split window with current path
 bind-key % split-window -h -c "#{pane_current_path}"

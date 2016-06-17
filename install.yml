@@ -8,12 +8,16 @@
     - homebrew/dupes
     - homebrew/versions
     - caskroom/versions
+    - choppsv1/term24
     brew_packages:
     - apple-gcc42
+    - aspell
     - awscli
     - awsebcli
     - azure-cli
     - ctags
+    - choppsv1/term24/emacs
+    - choppsv1/term24/tmux
     - cmake
     - elasticsearch
     - elixir
@@ -42,8 +46,7 @@
     - the_silver_searcher
     - tmate
     - tig
-    - tmux
-    - watchman
+    - watchman                   
     - zsh
     brew_pkg_with_opts:
     - { pkg: "macvim" , opts: "with-override-system-vim" }

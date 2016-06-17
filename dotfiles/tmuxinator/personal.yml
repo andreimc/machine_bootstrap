@@ -4,6 +4,6 @@ windows:
   - code:
       layout: even-vertical
       panes:
-        - vim
+        - emacs -nw
         -
 
