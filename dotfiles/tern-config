@@ -1,7 +1,5 @@
 {
   "libs": [
-    "browser",
-    "underscore",
   ],
   "plugins": {
     "node": {}

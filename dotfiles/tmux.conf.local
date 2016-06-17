@@ -2,9 +2,9 @@
 
 
 # remap prefix to ALT + a
-set -g prefix M-a
+set -g prefix `-a
 unbind C-b
-bind M-a send-prefix
+bind `-a send-prefix
 
 #split window with current path
 bind-key % split-window -h -c "#{pane_current_path}"
