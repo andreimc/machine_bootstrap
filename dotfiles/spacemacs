@@ -28,6 +28,7 @@ values."
      better-defaults
      clojure
      dash
+     dockerfile
      elixir
      emacs-lisp
      git
@@ -41,12 +42,15 @@ values."
      ruby-on-rails
      react
      themes-megapack
+     terraform
+     tmux
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
+     vagrant
      ;; version-control
      )
    ;; List of additional packages that will be installed without being
@@ -296,9 +300,12 @@ you should place your code here."
   (evil-leader/set-key "o y" 'copy-to-clipboard)
   (evil-leader/set-key "o p" 'paste-from-clipboard)
   (setq-default evil-escape-key-sequence "jk")
+  (setq-default evil-escape-key-sequence "kj")
+  (call-interactively 'neotree-show)
   (setq-default
    ;; js2-mode
    js2-basic-offset 2
+   js-indent-level 2
    ;; web-mode
    css-indent-offset 2
    web-mode-markup-indent-offset 2
