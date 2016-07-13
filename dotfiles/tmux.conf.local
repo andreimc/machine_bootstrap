@@ -1,5 +1,8 @@
 # plugins
 
+# escape timeout
+
+set -s escape-time 0
 
 # remap prefix to ALT + a
 set -g prefix C-a
