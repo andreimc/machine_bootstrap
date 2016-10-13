@@ -112,3 +112,7 @@ _tmuxinator() {
 }
 
 compdef _tmuxinator tmuxinator mux
+source ~/.common_env
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"

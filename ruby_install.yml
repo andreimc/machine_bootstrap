@@ -4,6 +4,7 @@
     gems:
       - tmuxinator
       - rubocop
+      - hub
   roles:
     - role: ruby_install
       ruby:
@@ -14,4 +15,9 @@
       ruby:
         version: 2.1.5
         global: false
+        gems: "{{ gems }}"
+    - role: ruby_install
+      ruby:
+        version: 2.2.5
+        global: true
         gems: "{{ gems }}"
