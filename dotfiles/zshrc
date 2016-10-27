@@ -84,6 +84,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tsj="tmuxinator projects"
 alias tsh="tmuxinator personal"
+alias tsg="tmuxinator go_jora"
 
 eval "$(hub alias -s)"
 
@@ -94,14 +95,21 @@ source ~/.scm_breeze/scm_breeze.sh
 
 export ITERM_24BIT=1
 
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GOPATH=~/.gopath
+
 _tmuxinator() {
   local commands projects
   projects=(${(f)"$(ls ~/projects)"})
   personal=(${(f)"$(ls ~/personal)"})
+  go_jora=(${(f)"$(ls $GOPATH/src/github.com/jobseekerltd)"})
 
   case $words[2] in
     projects)
       _describe -t projects "tmuxinator projects" projects && return 0
+      ;;
+    go_jora)
+      _describe -t projects "tmuxinator go_jora" go_jora && return 0
       ;;
     personal)
       _describe -t personal "tmuxinator personal" personal && return 0
@@ -116,3 +124,5 @@ source ~/.common_env
 
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
+
+

@@ -5,21 +5,27 @@
   - role: osxc.repository
     clone_url: https://github.com/syl20bnr/spacemacs
     dest: /Users/{{ ansible_user_id }}/.emacs.d
+    ignore_errors: true
   - role: osxc.repository
     clone_url: https://github.com/robbyrussell/oh-my-zsh.git
     dest: /Users/{{ ansible_user_id }}/.oh-my-zsh
+    ignore_errors: true
   - role: osxc.repository
     clone_url: https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest: /Users/{{ ansible_user_id }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    ignore_errors: true
   - role: osxc.repository
     clone_url: https://github.com/andreimc/scm_breeze.git
     dest: /Users/{{ ansible_user_id }}/.scm_breeze
+    ignore_errors: true
   - role: osxc.repository
     clone_url: https://github.com/tmux-plugins/tpm
     dest: /Users/{{ ansible_user_id }}/.tmux/plugins/tpm
+    ignore_errors: true
   - role: osxc.repository
     clone_url: https://github.com/andreimc/maximum-awesome.git
     dest: /Users/{{ ansible_user_id }}/.vim
+    ignore_errors: true
     links:
     - src: vimrc
       dest: /Users/{{ ansible_user_id }}/.vimrc
@@ -43,6 +49,7 @@
   - file: dest=/Users/{{ ansible_user_id }}/.tmuxinator state=directory
   - copy: src=dotfiles/tmuxinator/projects.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/projects.yml
   - copy: src=dotfiles/tmuxinator/personal.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/personal.yml
+  - copy: src=dotfiles/tmuxinator/go_jora.yml dest=/Users/{{ ansible_user_id }}/.tmuxinator/go_jora.yml
   - shell: dscl localhost -change /Local/Default/Users/{{ ansible_user_id }} UserShell /bin/bash /usr/local/bin/zsh
     ignore_errors: true
     sudo: yes
