@@ -44,6 +44,7 @@ values."
      themes-megapack
      terraform
      tmux
+     osx
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -271,35 +272,6 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-linum-mode)
   (setq create-lockfiles nil)
-  (defun copy-to-clipboard ()
-    "Copies selection to x-clipboard."
-    (interactive)
-    (if (display-graphic-p)
-        (progn
-          (message "Yanked region to x-clipboard!")
-          (call-interactively 'clipboard-kill-ring-save)
-          )
-      (if (region-active-p)
-          (progn
-            (shell-command-on-region (region-beginning) (region-end) "reattach-to-user-namespace pbcopy")
-            (message "Yanked region to clipboard!")
-            (deactivate-mark))
-        (message "No region active; can't yank to clipboard!")))
-    )
-
-  (defun paste-from-clipboard ()
-    "Pastes from x-clipboard."
-    (interactive)
-    (if (display-graphic-p)
-        (progn
-          (clipboard-yank)
-          (message "graphics active")
-          )
-      (insert (shell-command-to-string "reattach-to-user-namespace pbpaste"))
-      )
-    )
-  (evil-leader/set-key "o y" 'copy-to-clipboard)
-  (evil-leader/set-key "o p" 'paste-from-clipboard)
   (setq-default evil-escape-key-sequence "jk")
   (setq-default evil-escape-key-sequence "kj")
   (call-interactively 'neotree-show)
@@ -317,6 +289,7 @@ you should place your code here."
   (add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
   (javascript :variables javascript-disable-tern-port-files nil)
   (setq tern-command '("tern"))
+  (go :variables go-use-gometalinter t)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

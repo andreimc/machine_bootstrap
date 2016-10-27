@@ -97,6 +97,7 @@ export ITERM_24BIT=1
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 export GOPATH=~/.gopath
+export PATH=$PATH:$GOPATH/bin
 
 _tmuxinator() {
   local commands projects
@@ -124,5 +125,4 @@ source ~/.common_env
 
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
-
 
