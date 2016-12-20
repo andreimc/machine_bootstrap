@@ -8,66 +8,42 @@
     - homebrew/dupes
     - homebrew/versions
     - caskroom/versions
-    - choppsv1/term24
+    - neovim/neovim
     brew_packages:
-    - apple-gcc42
-    - aspell
-    - awscli
-    - awsebcli
-    - azure-cli
-    - ctags
-    - choppsv1/term24/emacs
-    - choppsv1/term24/tmux
-    - cmake
-    - elasticsearch
-    - elixir
-    - flow
     - git
     - git-lfs
     - golang
-    - heroku-toolbelt
     - hub
-    - imagemagick
     - kubectl
-    - leiningen
-    - maven
-    - memcached
-    - mongo
-    - node
-    - phantomjs
-    - postgresql
+    - nvm
+    - neovim
     - pow
-    - qt55
+    - pt
     - rbenv
     - reattach-to-user-namespace
-    - redis
-    - rlwrap
     - terraform
-    - the_silver_searcher
-    - tmate
+    - tmux
     - tig
-    - watchman                   
     - zsh
-    brew_pkg_with_opts:
-    - { pkg: "macvim" , opts: "with-override-system-vim" }
     cask_packages:
     - 1password
     - appzapper
     - alfred
     - atom
+    - dash
     - doitim
+    - docker
     - dropbox
-    - flux
+    - caffeine
     - font-inconsolata-g-for-powerline
     - google-chrome
     - google-drive
-    - google-hangouts
     - grandperspective
     - istat-menus
-    - iterm2-beta
-    - intellij-idea-ce
+    - iterm2
+    - hyper
     - karabiner
-    - seil
+    - little-snitch
     - skype
     - sizeup
     - slack

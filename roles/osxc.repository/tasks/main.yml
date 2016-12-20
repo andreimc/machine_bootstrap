@@ -5,7 +5,7 @@
 
 - name: Link the repo
   file: "src={{ dest + '/' + item.src }} dest={{ item.dest }} state=link"
-  with_items: links
+  with_items: "{{ links }}"
 
 - name: Setup env variables in the common env
   lineinfile: dest=/Users/{{ ansible_user_id }}/.common_env
@@ -13,5 +13,4 @@
               line="{{ item.line }}"
               state=present
               owner={{ ansible_user_id }}
-  with_items: env
-
+  with_items: "{{ env }}"

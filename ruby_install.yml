@@ -8,16 +8,6 @@
   roles:
     - role: ruby_install
       ruby:
-        version: 2.3.1
-        global: true
-        gems: "{{ gems }}"
-    - role: ruby_install
-      ruby:
-        version: 2.1.5
-        global: false
-        gems: "{{ gems }}"
-    - role: ruby_install
-      ruby:
-        version: 2.2.5
+        version: 2.3.3
         global: true
         gems: "{{ gems }}"

@@ -1,10 +1,9 @@
 ---
 # Your run is described here
-- include: app_store.yml
 - include: install.yml
 - include: configuration.yml
 - include: ruby_install.yml
-- include: start_brew_services.yml
-- include: link_brew_packages.yml
-- include: npm_global.yml
+#- include: start_brew_services.yml
+#- include: link_brew_packages.yml
+#- include: npm_global.yml
   #- include: pip_packages.yml

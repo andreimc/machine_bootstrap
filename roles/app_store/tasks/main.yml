@@ -13,7 +13,7 @@
 
 - name: Get app from store
   shell: "mas search '{{ item }}' | head -n 1 | cut -f 1 -d ' ' | xargs mas install"
-  with_items: apps
+  with_items: "{{ apps }}"
   when: item not in installed_apps.stdout
   ignore_errors: true
 
